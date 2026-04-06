@@ -1,0 +1,12 @@
+# onest Website
+
+Official website for the onest brand (onest.care).
+
+## Project Setup
+- Drop your prompt and MD files into the `docs/` folder
+- Open this folder in Claude Code to begin development
+- Run `npm install` after initial scaffold
+
+## Links
+- Instagram: https://www.instagram.com/onest.care
+- Parent company: SV Biotech (https://www.svbiotech.co/th)
