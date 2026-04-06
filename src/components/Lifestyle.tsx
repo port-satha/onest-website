@@ -15,9 +15,9 @@ const images = [
 
 export default function Lifestyle() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3">
+    <section className="grid grid-cols-1 md:grid-cols-3 max-w-[1920px] mx-auto">
       {images.map((img) => (
-        <div key={img.alt} className="overflow-hidden relative aspect-[4/3] md:aspect-auto md:min-h-[480px]">
+        <div key={img.alt} className="overflow-hidden relative aspect-[16/10]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={img.src}

@@ -1,7 +1,7 @@
 export default function Hero({ onOpenModal }: { onOpenModal: () => void }) {
   return (
-    <section className="min-h-screen grid grid-cols-1 md:grid-cols-[1fr_1.1fr] bg-cream">
-      <div className="flex flex-col justify-end px-6 md:px-16 pt-32 pb-12 md:pb-20 z-2">
+    <section className="min-h-screen grid grid-cols-1 md:grid-cols-[1fr_1.1fr] bg-cream max-w-[1920px] mx-auto">
+      <div className="flex flex-col justify-end px-6 md:px-16 lg:px-24 pt-32 pb-12 md:pb-20 z-2">
         <div
           className="text-[0.65rem] tracking-[0.25em] uppercase text-deep-sage mb-8 font-medium animate-fade-up"
           style={{ animationDelay: "0.3s" }}

@@ -35,43 +35,45 @@ const products = [
 
 export default function Products() {
   return (
-    <section id="products" className="px-6 md:px-12 py-16 md:py-32 max-w-[1300px] mx-auto">
-      <div className="text-center mb-12 md:mb-20">
-        <h2 className="font-[var(--font-heading)] text-[clamp(2rem,3.5vw,3rem)] font-light mb-4">
-          Essentials for Elevated Living
-        </h2>
-        <p className="text-[0.85rem] text-charcoal font-light max-w-[500px] mx-auto leading-[1.7]">
-          Home care that feels like self-care. Body care that honours your
-          ritual. Every product designed for a specific recharge moment.
-        </p>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-        {products.map((p) => (
-          <div
-            key={p.name}
-            className="cursor-pointer transition-transform duration-300 hover:-translate-y-1"
-          >
-            <div className="aspect-[3/4] mb-5 rounded-sm relative overflow-hidden bg-cream">
-              <span className="absolute top-3 left-3 text-[0.55rem] tracking-[0.14em] uppercase text-warm-white bg-soft-black/50 backdrop-blur-[8px] px-3 py-1 z-3">
-                {p.tag}
-              </span>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={p.image}
-                alt={p.name}
-                className="img-fill"
-                referrerPolicy="no-referrer"
-              />
+    <section id="products" className="py-16 md:py-32">
+      <div className="section-container">
+        <div className="text-center mb-12 md:mb-20">
+          <h2 className="font-[var(--font-heading)] text-[clamp(2rem,3.5vw,3rem)] font-light mb-4">
+            Essentials for Elevated Living
+          </h2>
+          <p className="text-[0.85rem] text-charcoal font-light max-w-[500px] mx-auto leading-[1.7]">
+            Home care that feels like self-care. Body care that honours your
+            ritual. Every product designed for a specific recharge moment.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          {products.map((p) => (
+            <div
+              key={p.name}
+              className="cursor-pointer transition-transform duration-300 hover:-translate-y-1"
+            >
+              <div className="aspect-[3/4] mb-5 rounded-sm relative overflow-hidden bg-cream">
+                <span className="absolute top-3 left-3 text-[0.55rem] tracking-[0.14em] uppercase text-warm-white bg-soft-black/50 backdrop-blur-[8px] px-3 py-1 z-3">
+                  {p.tag}
+                </span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  className="img-fill"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="font-[var(--font-heading)] text-[1.15rem] font-normal mb-1">
+                {p.name}
+              </div>
+              <div className="text-[0.72rem] text-stone tracking-[0.08em] mb-2">
+                {p.type}
+              </div>
+              <div className="text-[0.85rem] font-medium">{p.price}</div>
             </div>
-            <div className="font-[var(--font-heading)] text-[1.15rem] font-normal mb-1">
-              {p.name}
-            </div>
-            <div className="text-[0.72rem] text-stone tracking-[0.08em] mb-2">
-              {p.type}
-            </div>
-            <div className="text-[0.85rem] font-medium">{p.price}</div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

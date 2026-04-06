@@ -34,8 +34,8 @@ const scents = [
 export default function Scents() {
   return (
     <section id="scents" className="bg-soft-black text-cream">
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr]">
-        <div className="px-6 md:px-16 py-16 md:py-24 flex flex-col justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] max-w-[1920px] mx-auto">
+        <div className="px-6 md:px-16 lg:px-24 py-16 md:py-24 flex flex-col justify-center">
           <h2 className="font-[var(--font-heading)] text-[clamp(2rem,3.5vw,3rem)] font-light leading-[1.2] mb-6">
             The Kindness Scent<br />Collection
           </h2>
@@ -55,7 +55,7 @@ export default function Scents() {
           />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row gap-px bg-white/5">
+      <div className="flex flex-col md:flex-row gap-px bg-white/5 max-w-[1920px] mx-auto">
         {scents.map((scent) => (
           <div
             key={scent.number}

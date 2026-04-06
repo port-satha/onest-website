@@ -27,42 +27,44 @@ const stores = [
 
 export default function Stores() {
   return (
-    <section id="stores" className="px-6 md:px-12 py-16 md:py-32 max-w-[1300px] mx-auto">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-4">
-        <h2 className="font-[var(--font-heading)] text-[clamp(2rem,3.5vw,3rem)] font-light">
-          Visit Our Homes
-        </h2>
-        <a href="#" className="btn-outline">
-          View All Locations
-        </a>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {stores.map((s) => (
-          <div
-            key={s.name}
-            className="transition-transform duration-300 hover:-translate-y-1"
-          >
-            <div className="w-full aspect-[4/3] mb-6 rounded-sm overflow-hidden relative">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={s.image}
-                alt={`${s.name} store`}
-                className="img-fill"
-                referrerPolicy="no-referrer"
-              />
+    <section id="stores" className="py-16 md:py-32">
+      <div className="section-container">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-4">
+          <h2 className="font-[var(--font-heading)] text-[clamp(2rem,3.5vw,3rem)] font-light">
+            Visit Our Homes
+          </h2>
+          <a href="#" className="btn-outline">
+            View All Locations
+          </a>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {stores.map((s) => (
+            <div
+              key={s.name}
+              className="transition-transform duration-300 hover:-translate-y-1"
+            >
+              <div className="w-full aspect-[4/3] mb-6 rounded-sm overflow-hidden relative">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={s.image}
+                  alt={`${s.name} store`}
+                  className="img-fill"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="text-[0.6rem] tracking-[0.15em] uppercase text-deep-sage mb-2 font-medium">
+                {s.type}
+              </div>
+              <div className="font-[var(--font-heading)] text-[1.4rem] font-normal mb-3">
+                {s.name}
+              </div>
+              <div className="text-[0.82rem] leading-[1.6] text-charcoal font-light mb-2 whitespace-pre-line">
+                {s.address}
+              </div>
+              <div className="text-[0.75rem] text-stone">{s.hours}</div>
             </div>
-            <div className="text-[0.6rem] tracking-[0.15em] uppercase text-deep-sage mb-2 font-medium">
-              {s.type}
-            </div>
-            <div className="font-[var(--font-heading)] text-[1.4rem] font-normal mb-3">
-              {s.name}
-            </div>
-            <div className="text-[0.82rem] leading-[1.6] text-charcoal font-light mb-2 whitespace-pre-line">
-              {s.address}
-            </div>
-            <div className="text-[0.75rem] text-stone">{s.hours}</div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
