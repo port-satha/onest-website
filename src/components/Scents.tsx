@@ -47,10 +47,11 @@ export default function Scents() {
         <div className="min-h-[320px] md:min-h-[420px] overflow-hidden relative">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://images.unsplash.com/photo-1547793549-70faf88c9c8e?w=900&q=80"
+            src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=900&q=80"
             alt="Botanical fragrance ingredients"
-            className="absolute inset-0"
+            className="img-fill"
             style={{ objectPosition: "center 40%" }}
+            referrerPolicy="no-referrer"
           />
         </div>
       </div>

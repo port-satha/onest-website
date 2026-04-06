@@ -42,9 +42,14 @@ export default function Stores() {
             key={s.name}
             className="transition-transform duration-300 hover:-translate-y-1"
           >
-            <div className="w-full aspect-[4/3] mb-6 rounded-sm overflow-hidden">
+            <div className="w-full aspect-[4/3] mb-6 rounded-sm overflow-hidden relative">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={s.image} alt={`${s.name} store`} />
+              <img
+                src={s.image}
+                alt={`${s.name} store`}
+                className="img-fill"
+                referrerPolicy="no-referrer"
+              />
             </div>
             <div className="text-[0.6rem] tracking-[0.15em] uppercase text-deep-sage mb-2 font-medium">
               {s.type}

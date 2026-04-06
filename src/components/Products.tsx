@@ -5,7 +5,7 @@ const products = [
     price: "฿1,490",
     tag: "Bestseller",
     image:
-      "https://images.unsplash.com/photo-1629198688000-71f23e745571?w=500&q=80",
+      "https://images.unsplash.com/photo-1602928321679-560bb453f190?w=500&q=80",
   },
   {
     name: "Body Cleanser",
@@ -56,7 +56,12 @@ export default function Products() {
                 {p.tag}
               </span>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={p.image} alt={p.name} />
+              <img
+                src={p.image}
+                alt={p.name}
+                className="img-fill"
+                referrerPolicy="no-referrer"
+              />
             </div>
             <div className="font-[var(--font-heading)] text-[1.15rem] font-normal mb-1">
               {p.name}

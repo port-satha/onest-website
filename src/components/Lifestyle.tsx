@@ -15,11 +15,16 @@ const images = [
 
 export default function Lifestyle() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 min-h-[280px] md:min-h-[480px]">
+    <section className="grid grid-cols-1 md:grid-cols-3">
       {images.map((img) => (
-        <div key={img.alt} className="overflow-hidden relative min-h-[280px]">
+        <div key={img.alt} className="overflow-hidden relative aspect-[4/3] md:aspect-auto md:min-h-[480px]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={img.src} alt={img.alt} className="absolute inset-0" />
+          <img
+            src={img.src}
+            alt={img.alt}
+            className="img-fill"
+            referrerPolicy="no-referrer"
+          />
         </div>
       ))}
     </section>

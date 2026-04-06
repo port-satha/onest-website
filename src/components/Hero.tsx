@@ -39,7 +39,8 @@ export default function Hero({ onOpenModal }: { onOpenModal: () => void }) {
         <img
           src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=1200&q=80"
           alt="Warm minimalist home with natural light"
-          className="absolute inset-0 md:static"
+          className="img-fill"
+          referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-cream to-transparent md:via-transparent z-1 pointer-events-none" />
       </div>
