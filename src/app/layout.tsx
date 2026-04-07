@@ -3,7 +3,7 @@ import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
-  variable: "--font-heading",
+  variable: "--font-cormorant",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
   style: ["normal", "italic"],
@@ -11,7 +11,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 const dmSans = DM_Sans({
-  variable: "--font-body",
+  variable: "--font-dm",
   subsets: ["latin"],
   weight: ["300", "400", "500"],
   display: "swap",
@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${dmSans.variable} antialiased`}
+      className={`${cormorant.variable} ${dmSans.variable}`}
     >
       <body>{children}</body>
     </html>

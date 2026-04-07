@@ -1,40 +1,36 @@
 export default function Hero({ onOpenModal }: { onOpenModal: () => void }) {
   return (
-    <section className="min-h-screen grid grid-cols-1 md:grid-cols-[1fr_1.1fr] bg-cream max-w-[1920px] mx-auto">
-      <div className="flex flex-col justify-end px-6 md:px-16 lg:px-24 pt-32 pb-12 md:pb-20 z-2">
+    <section className="min-h-screen bg-cream" style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr' }}>
+      <div className="flex flex-col justify-end" style={{ padding: '0 4rem 5rem' }}>
         <div
-          className="text-[0.65rem] tracking-[0.25em] uppercase text-deep-sage mb-8 font-medium animate-fade-up"
-          style={{ animationDelay: "0.3s" }}
+          className="animate-fade-up"
+          style={{ fontSize: '0.65rem', letterSpacing: '0.25em', textTransform: 'uppercase', color: '#7A8E70', marginBottom: '2rem', fontWeight: 500, animationDelay: '0.3s' }}
         >
           Crafted Home &amp; Body Care
         </div>
         <h1
-          className="font-[var(--font-heading)] text-[clamp(3rem,5vw,4.5rem)] font-light leading-[1.1] text-soft-black mb-8 animate-fade-up"
-          style={{ animationDelay: "0.5s" }}
+          className="font-heading animate-fade-up"
+          style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', fontWeight: 300, lineHeight: 1.1, color: '#1A1918', marginBottom: '2rem', animationDelay: '0.5s' }}
         >
           Come home.<br />
-          Feel <em className="italic text-pine">elevated</em>.
+          Feel <em style={{ fontStyle: 'italic', color: '#3D5A3A' }}>elevated</em>.
         </h1>
         <p
-          className="text-base leading-[1.7] text-charcoal max-w-[420px] font-light mb-10 animate-fade-up"
-          style={{ animationDelay: "0.7s" }}
+          className="animate-fade-up"
+          style={{ fontSize: '1rem', lineHeight: 1.7, color: '#2C2B28', maxWidth: '420px', fontWeight: 300, marginBottom: '2.5rem', animationDelay: '0.7s' }}
         >
           Plant-based home and body care, thoughtfully crafted in Thailand. For
           those who believe everyday rituals deserve more intention.
         </p>
         <div
-          className="flex flex-col md:flex-row gap-4 items-start animate-fade-up"
-          style={{ animationDelay: "0.9s" }}
+          className="flex items-center animate-fade-up"
+          style={{ gap: '1rem', animationDelay: '0.9s' }}
         >
-          <a href="#products" className="btn-primary">
-            Explore Collection
-          </a>
-          <button onClick={onOpenModal} className="btn-outline">
-            Become a Member
-          </button>
+          <a href="#products" className="btn-primary">Explore Collection</a>
+          <button onClick={onOpenModal} className="btn-outline">Become a Member</button>
         </div>
       </div>
-      <div className="relative overflow-hidden aspect-[4/3] md:aspect-auto">
+      <div className="relative overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=1200&q=80"
@@ -42,8 +38,26 @@ export default function Hero({ onOpenModal }: { onOpenModal: () => void }) {
           className="img-fill"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-cream to-transparent md:via-transparent z-1 pointer-events-none" />
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(90deg, #F6F1EB 0%, transparent 25%)', zIndex: 1 }} />
       </div>
+
+      <style jsx>{`
+        @media (max-width: 900px) {
+          section {
+            grid-template-columns: 1fr !important;
+            min-height: auto !important;
+          }
+          section > div:first-child {
+            padding: 8rem 1.5rem 3rem !important;
+          }
+          section > div:last-child {
+            aspect-ratio: 4/3;
+          }
+          section > div:last-child > div {
+            background: linear-gradient(180deg, #F6F1EB 0%, transparent 30%) !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

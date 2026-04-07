@@ -8,15 +8,27 @@ const items = [
 
 export default function BrandBar() {
   return (
-    <div className="flex items-center justify-center gap-4 md:gap-14 flex-wrap px-6 md:px-12 py-5 md:py-7 bg-soft-black text-stone/45 text-[0.45rem] md:text-[0.6rem] tracking-[0.22em] uppercase">
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3.5rem', padding: '1.8rem 3rem', background: '#1A1918', color: 'rgba(212,201,188,0.45)', fontSize: '0.6rem', letterSpacing: '0.22em', textTransform: 'uppercase' }}>
       {items.map((item, i) => (
-        <span key={item} className="flex items-center gap-4 md:gap-14">
+        <span key={item} style={{ display: 'flex', alignItems: 'center', gap: '3.5rem' }}>
           {i > 0 && (
-            <span className="w-[3px] h-[3px] rounded-full bg-stone/25 shrink-0" />
+            <span style={{ width: '3px', height: '3px', borderRadius: '50%', background: 'rgba(212,201,188,0.25)', flexShrink: 0 }} />
           )}
           <span>{item}</span>
         </span>
       ))}
+
+      <style jsx>{`
+        @media (max-width: 900px) {
+          div {
+            gap: 1rem !important;
+            font-size: 0.45rem !important;
+            flex-wrap: wrap;
+            padding: 1.2rem 1.5rem !important;
+          }
+          div > span { gap: 1rem !important; }
+        }
+      `}</style>
     </div>
   );
 }
