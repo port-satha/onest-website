@@ -33,10 +33,9 @@ export default function Hero({ onOpenModal }: { onOpenModal: () => void }) {
       <div className="relative overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=1200&q=80"
+          src="/images/hero-home.jpg"
           alt="Warm minimalist home with natural light"
           className="img-fill"
-          referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(90deg, #F6F1EB 0%, transparent 25%)', zIndex: 1 }} />
       </div>
@@ -52,6 +51,9 @@ export default function Hero({ onOpenModal }: { onOpenModal: () => void }) {
           }
           section > div:last-child {
             aspect-ratio: 4/3;
+          }
+          section > div:last-child img {
+            position: relative !important;
           }
           section > div:last-child > div {
             background: linear-gradient(180deg, #F6F1EB 0%, transparent 30%) !important;

@@ -21,7 +21,7 @@ export default function Scents() {
         </div>
         <div style={{ minHeight: '420px', overflow: 'hidden', position: 'relative' }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=900&q=80" alt="Botanical fragrance ingredients" className="img-fill" style={{ objectPosition: 'center 40%' }} referrerPolicy="no-referrer" />
+          <img src="/images/scent-hero.jpg" alt="Botanical fragrance ingredients" className="img-fill" style={{ objectPosition: 'center 40%' }} />
         </div>
       </div>
 
@@ -29,7 +29,6 @@ export default function Scents() {
         {scents.map((scent) => (
           <div
             key={scent.number}
-            className="group"
             style={{ flex: 1, padding: '3rem 2.5rem', position: 'relative', overflow: 'hidden', transition: 'all 0.5s ease', cursor: 'pointer', minHeight: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}
             onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; const overlay = e.currentTarget.querySelector('.scent-overlay') as HTMLElement; if (overlay) overlay.style.opacity = '1'; const desc = e.currentTarget.querySelector('.scent-desc') as HTMLElement; if (desc) { desc.style.maxHeight = '100px'; desc.style.opacity = '1'; } }}
             onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; const overlay = e.currentTarget.querySelector('.scent-overlay') as HTMLElement; if (overlay) overlay.style.opacity = '0'; const desc = e.currentTarget.querySelector('.scent-desc') as HTMLElement; if (desc) { desc.style.maxHeight = '0'; desc.style.opacity = '0'; } }}

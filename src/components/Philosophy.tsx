@@ -9,7 +9,7 @@ export default function Philosophy() {
     <section id="philosophy" style={{ padding: '8rem 3rem', display: 'grid', gridTemplateColumns: '1fr 1.15fr', gap: '5rem', alignItems: 'center', maxWidth: '1300px', margin: '0 auto' }}>
       <div style={{ width: '100%', aspectRatio: '4/5', borderRadius: '2px', overflow: 'hidden', position: 'relative' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="https://images.unsplash.com/photo-1556760544-74068565f05c?w=800&q=80" alt="Crafting natural botanical products" className="img-fill" referrerPolicy="no-referrer" />
+        <img src="/images/philosophy-botanical.jpg" alt="Crafting natural botanical products" className="img-fill" />
       </div>
       <div>
         <h2 className="font-heading" style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 300, lineHeight: 1.2, marginBottom: '2rem', color: '#1A1918' }}>

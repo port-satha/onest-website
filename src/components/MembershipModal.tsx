@@ -146,6 +146,9 @@ export default function MembershipModal({ isOpen, onClose }: { isOpen: boolean; 
                     <option value="chalene-rose">Chalene Rose — Rose &amp; warm wood</option>
                     <option value="neroli-garden">Neroli Garden — Citrus &amp; green</option>
                     <option value="white-tea-retreat">White Tea Retreat — Clean &amp; calm</option>
+                    <option value="cotton-musk">Cotton Musk — Soft &amp; familiar</option>
+                    <option value="wild-mint">Wild Mint — Fresh &amp; bright</option>
+                    <option value="serene-tea">Serene Tea — Calm &amp; balanced</option>
                   </select>
                 </div>
               </div>

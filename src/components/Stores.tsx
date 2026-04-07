@@ -1,7 +1,7 @@
 const stores = [
-  { name: "Song Wat", type: "Flagship", address: "1198 Song Wat Road,\nSamphanthawong, Bangkok", hours: "Daily 11:00 — 19:00", image: "https://images.unsplash.com/photo-1604709177225-055f99402ea3?w=600&q=80" },
-  { name: "Talat Noi", type: "Neighbourhood", address: "Soi Wanit 2,\nSamphanthawong, Bangkok", hours: "Sat — Sun 10:00 — 18:00", image: "https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=600&q=80" },
-  { name: "Siam Discovery", type: "Retail Partner", address: "Siam Discovery, 2F\nPathum Wan, Bangkok", hours: "Daily 10:00 — 22:00", image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=600&q=80" },
+  { name: "Song Wat", type: "Flagship", address: "1198 Song Wat Road,\nSamphanthawong, Bangkok", hours: "Daily 11:00 — 19:00", image: "/images/store-songwat.jpg" },
+  { name: "Talat Noi", type: "Neighbourhood", address: "Soi Wanit 2,\nSamphanthawong, Bangkok", hours: "Sat — Sun 10:00 — 18:00", image: "/images/store-talatnoi.jpg" },
+  { name: "Siam Discovery", type: "Retail Partner", address: "Siam Discovery, 2F\nPathum Wan, Bangkok", hours: "Daily 10:00 — 22:00", image: "/images/store-siam.jpg" },
 ];
 
 export default function Stores() {
@@ -16,7 +16,7 @@ export default function Stores() {
           <div key={s.name} style={{ transition: 'transform 0.3s ease', cursor: 'pointer' }} onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-4px)'} onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}>
             <div style={{ width: '100%', aspectRatio: '4/3', marginBottom: '1.5rem', borderRadius: '2px', overflow: 'hidden', position: 'relative' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={s.image} alt={`${s.name} store`} className="img-fill" referrerPolicy="no-referrer" />
+              <img src={s.image} alt={`${s.name} store`} className="img-fill" />
             </div>
             <div style={{ fontSize: '0.6rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#7A8E70', marginBottom: '0.5rem', fontWeight: 500 }}>{s.type}</div>
             <div className="font-heading" style={{ fontSize: '1.4rem', fontWeight: 400, marginBottom: '0.8rem' }}>{s.name}</div>
